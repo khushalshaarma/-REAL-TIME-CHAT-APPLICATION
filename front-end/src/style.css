@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* App */
+.App {
+  background-color: #121212;
+  color: #e0e0e0;
+  max-height: 100%;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Login Container */
+.login_container {
+  height: 100vh;
+  width: 60vw;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.login_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #e1e7f0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login_icon {
+  margin-right: 10px;
+  color: #d61414;
+  font-size: 30px;
+}
+
+.login_form input {
+  margin: 10px;
+  height: 50px;
+  width: 60%;
+  max-width: 500px;
+  min-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #fdfdfd;
+  font-size: 16px;
+  padding: 0 15px;
+  background-color: #1e1e1e;
+  color: #1ad6f3;
+  outline: none;
+}
+
+.login_form input:focus {
+  border-color: #0572df;
+  box-shadow: 0 0 5px rgba(5, 114, 223, 0.5);
+}
+
+.login_form button {
+  width: 25%;
+  height: 50px;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #0572df;
+  border: none;
+  color: #fff;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 191, 166, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.login_form button:hover {
+  background-color: #718fe2;
+}
+
+/* Chat Container */
+.chats_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.chats_icon {
+  color: #ff5252;
+}
+
+.chats_logout {
+  color: #e64e49;
+  cursor: pointer;
+}
+
+.home {
+  padding: 0 10%;
+}
+
+/* Chats list */
+.chats_list {
+  height: 75vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  box-shadow: inset 0 0 5px #333;
+}
+
+.chat_sender {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.chat_receiver {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.chat_sender img,
+.chat_receiver img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 0 10px;
+}
+
+/* Always-on Glow Animations */
+@keyframes glowPulseBlue {
+  0% {
+    box-shadow: 0 0 8px rgba(0, 153, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 153, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(0, 153, 255, 0.6);
+  }
+}
+
+@keyframes glowPulseGreen {
+  0% {
+    box-shadow: 0 0 8px rgba(29, 233, 182, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(29, 233, 182, 1);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(29, 233, 182, 0.6);
+  }
+}
+
+/* Shared message bubble styles */
+.chat_sender p,
+.chat_receiver p {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 60%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Sender bubble with blue glow */
+.chat_sender p {
+  background-color: #2f2f2f;
+  color: #f1f1f1;
+  animation: glowPulseBlue 1.5s infinite ease-in-out;
+}
+
+/* Receiver bubble with green glow */
+.chat_receiver p {
+  background-color: #1dafe9;
+  color: #000;
+  animation: glowPulseGreen 1.5s infinite ease-in-out;
+}
+
+/* Input Area */
+.inputtext_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 15px;
+  color: white;
+}
+
+.inputtext_container textarea {
+  width: 60%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  resize: none;
+  outline: none;
+}
+
+
+.inputtext_container button {
+  height: 50px;
+  padding: 0 20px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0572df;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(5, 114, 223, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.inputtext_container :hover {
+  background-color: #2b8cf7;
+  transform: translateY(-2px);
+}
+
+
+.inputtext_container button:hover {
+  background-color: #2b8cf7;
+  transform: translateY(-2px);
+}
+
+.inputtext_container button:active {
+  transform: scale(0.97);
+  background-color: #0561d1;
+}
