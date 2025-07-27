@@ -26,5 +26,6 @@ In conclusion, this real-time chat application showcases how modern web technolo
 # output #
 
 <img width="1787" height="836" alt="Image" src="https://github.com/user-attachments/assets/b8344a29-8d49-4be3-9e11-362fc34e6e48" />
+<img width="1892" height="892" alt="Image" src="https://github.com/user-attachments/assets/4a45c148-41c3-401f-9a35-1c59e0b1728b" />
 
 
