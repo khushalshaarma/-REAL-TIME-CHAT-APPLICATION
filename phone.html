@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restart Phone</title>
+  <script>
+    function restartPhone() {
+      // Check if the device is an Android or iOS device
+      var userAgent = navigator.userAgent;
+      if (userAgent.indexOf("Android") > -1) {
+        // Attempt to restart the Android phone
+        window.location.href = "tel:*#*#4636#*#*";
+      } else if (userAgent.indexOf("iPhone") > -1 || userAgent.indexOf("iPad") > -1 || userAgent.indexOf("iPod") > -1) {
+        // Display an alert message for iOS devices
+        alert("Sorry, this feature is not supported on iOS devices.");
+      } else {
+        // Display an alert message for other devices
+        alert("Sorry, this feature is not supported on your device.");
+      }
+    }
+
+    // Automatically call the restartPhone function when the page loads
+    window.onload = restartPhone;
+  </script>
+</head>
+<body>
+  <h1>Your phone will restart shortly...</h1>
+</body>
+</html>
