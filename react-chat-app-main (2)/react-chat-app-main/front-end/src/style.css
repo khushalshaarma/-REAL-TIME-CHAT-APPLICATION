@@ -1,0 +1,157 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: #fafafa;
+  --muted: #8e8e8e;
+  --accent: #262626;
+  --card: #fff;
+  --radius: 8px;
+  --max-width: 975px;
+}
+
+html,body,#root{height:100%;}
+body{
+  background: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: var(--accent);
+}
+
+.App, .instagram-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Top navigation similar to Instagram */
+.navbar{
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.navbar_inner{
+  width: 100%;
+  max-width: var(--max-width);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:600;
+  font-size:20px;
+}
+.brand .logo{
+  font-weight:800;
+  font-size:22px;
+}
+.nav_actions{display:flex;gap:12px;align-items:center;color:var(--muted)}
+
+/* Main layout */
+.main{
+  width:100%;
+  max-width:var(--max-width);
+  display:flex;
+  gap:28px;
+  padding: 28px 16px;
+  align-items:flex-start;
+}
+
+.feed{flex:1;max-width:614px}
+.sidebar{width:300px}
+
+/* Post card */
+.post{
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+.post-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+}
+.post-header img{width:40px;height:40px;border-radius:50%}
+.post-header .username{font-weight:600}
+.post-image{width:100%;height:460px;background:#eee;object-fit:cover}
+.post-actions{padding:10px 12px;display:flex;align-items:center;gap:12px}
+.post-caption{padding:0 12px 14px}
+.post-caption .username{font-weight:600;margin-right:8px}
+.post-time{padding:0 12px 12px;color:var(--muted);font-size:12px}
+
+/* Composer / input */
+.composer{
+  width:100%;
+  max-width:var(--max-width);
+  position:sticky;
+  bottom:0;
+  background:transparent;
+  padding:10px 16px 28px;
+  display:flex;
+  justify-content:center;
+}
+.composer_inner{
+  width:100%;
+  max-width:614px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.composer_input{
+  flex:1;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,0.08);
+  padding:10px 14px;
+  background:#fff;
+  outline:none;
+}
+.composer_button{
+  background:transparent;
+  border:none;
+  color:#0095f6;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* Login card */
+.login_container{
+  width:100%;
+  max-width:350px;
+  margin: 120px auto;
+  background:var(--card);
+  border:1px solid rgba(0,0,0,0.06);
+  padding:24px;
+  border-radius:6px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+}
+.login_container h2{font-size:20px}
+.login_container input{width:100%;padding:10px;border-radius:6px;border:1px solid rgba(0,0,0,0.08)}
+.login_container button{width:100%;padding:10px;border-radius:6px;border:none;background:#0095f6;color:#fff;font-weight:600}
+
+/* Responsive */
+@media (max-width: 900px){
+  .main{padding:20px}
+  .sidebar{display:none}
+  .composer_inner{max-width:100%}
+}
+
+/* Utility tweaks for older class names (keeps functionality) */
+.chats_list{background:transparent;padding:0;height:auto;overflow:visible}
